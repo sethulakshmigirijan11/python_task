@@ -48,7 +48,8 @@ print(a,b)
 
 numbers=[1,2,2,3,1,2,4,3,1]
 frequency={}
-frequency[i]=frequency.get(i,0)+1
+for i in numbers:
+ frequency[i]=frequency.get(i,0)+1
 print(frequency)
 
 #find the student with highest mark
