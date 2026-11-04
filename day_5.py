@@ -19,7 +19,7 @@ for i in range(1,11):
     if i not in num:
      print(i)
 
-#rotate the from last by two positions
+#rotate the numbers from last by two positions
 num=[1,2,3,4,5,6]
 for i in range(2):
    last=num.pop()
@@ -74,3 +74,38 @@ if len(a&b)==0:
    print("sets are disjoint")
 else:
    print("sets are not disjoint")
+
+#create a function that accept a list and return a new list without duplicates
+def remove_duplicates(numbers):
+   result=[]
+   for i in numbers:
+      if i not in result:
+       result.append(i)
+   return result
+numbers=[2,4,2,8,4,8]
+print(remove_duplicates(numbers))
+
+#create a function that counts how many times each word appears
+def count(words):
+   result={}
+   for i in words:
+      if i in result:
+         result[i]+=1
+      else:
+         result[i]=1
+   return result
+words=["apple","banana","apple","orange","banana","apple"]
+print(count(words))
+
+#separate even and odd  numbers
+def evenodd(numbers):
+   even=[]
+   odd=[]
+   for i in numbers:
+      if i%2==0:
+         even.append(i)
+      else:
+         odd.append(i)
+   return even,odd
+numbers=[1,2,3,4,5,6]
+print(evenodd(numbers))
